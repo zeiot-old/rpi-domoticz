@@ -1,0 +1,26 @@
+machine:
+  services:
+    - docker
+
+general:
+  branches:
+    ignore:
+      - gh-pages # list of branches to ignore
+
+dependencies:
+  cache_directories:
+    - "~/docker"
+  override:
+    - docker info
+    - docker build -t zeiot/domoticz:3.5 3.5
+
+test:
+  override:
+    - docker run zeiot/domoticz:3.5 domoticz-3.5 ; sleep 10 ; docker stop domoticz-3.5
+
+#deployment:
+#  hub:
+#    branch: master
+#    commands:
+#      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+#      - docker push portefaix/elasticsearch
