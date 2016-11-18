@@ -4,6 +4,7 @@
 * Develop : [![Circle CI](https://circleci.com/gh/zeiot/rpi-domoticz/tree/develop.svg?style=svg)](https://circleci.com/gh/zeiot/rpi-domoticz/tree/develop)
 
 Docker image of [Domoticz][] to use on a [Raspberry PI][].
+See releases on : https://www.domoticz.com/downloads/
 
 Exposes Port `8080` 
 
