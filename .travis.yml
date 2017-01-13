@@ -1,0 +1,8 @@
+sudo: required
+services:
+  - docker
+language: bash
+script:
+  - docker run --rm --privileged multiarch/qemu-user-static:register --reset
+  - docker build -t zeiot/rpi-domoticz:3.5 3.5
+  - docker run zeiot/rpi-domoticz:3.5 --version
