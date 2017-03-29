@@ -16,7 +16,7 @@ RUN \
   apt-get clean && \
   apt-get autoclean && \
   rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-  
+
 ADD https://releases.domoticz.com/releases/release/domoticz_linux_armv7l.tgz /domoticz.tar.gz
 
 RUN mkdir /domoticz && \
@@ -25,7 +25,7 @@ RUN mkdir /domoticz && \
 
 EXPOSE 8080
 
-VOLUME ["/config"]
+VOLUME ["/config", "/domoticz/scripts"]
 
 ENTRYPOINT [ "/domoticz/domoticz" ]
 
