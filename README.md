@@ -54,4 +54,4 @@ Nicolas Lamirault <nicolas.lamirault@gmail.com>
 
 
 [Raspberry PI]: https://www.raspberrypi.org/
-[Mosquitto]: https://domoticz.com/
+[Domoticz]: https://domoticz.com/
