@@ -1,12 +1,13 @@
 # RPI Domoticz
 
-* Master : [![Circle CI](https://circleci.com/gh/zeiot/rpi-domoticz/tree/master.svg?style=svg)](https://circleci.com/gh/zeiot/rpi-domoticz/tree/master)
-* Develop : [![Circle CI](https://circleci.com/gh/zeiot/rpi-domoticz/tree/develop.svg?style=svg)](https://circleci.com/gh/zeiot/rpi-domoticz/tree/develop)
+* Master : [![Circle CI](https://circleci.com/gh/zeiot/rpi-domoticz/tree/master.svg?style=svg)](https://circleci.com/gh/zeiot/rpi-domoticz/tree/master) [![Build Status](https://travis-ci.org/zeiot/rpi-domoticz.svg?branch=master)](https://travis-ci.org/zeiot/rpi-domoticz)
 
 Docker image of [Domoticz][] to use on a [Raspberry PI][].
 See releases on : https://www.domoticz.com/downloads/
 
-Exposes Port `8080` 
+Exposes Port `8080`
+
+Volumes : `/config` and `/domoticz/scripts`
 
 Configure binfmt-support on the Docker host (works locally or remotely, i.e: using boot2docker):
 
@@ -26,6 +27,10 @@ Or build :
 Launch Domoticz :
 
     $ make run version=3.5
+
+With *docker*:
+
+    $ docker run -it --rm -v /src/domoticz/etc/:/config -v /srv/domoticz/scripts:/scripts –device /dev/ttyUSB1 zeiot:rpi-domoticz
 
 
 # Supported tags
