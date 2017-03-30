@@ -7,8 +7,6 @@ MAINTAINER Nicolas Lamirault <nicolas.lamirault@gmail.com>
 
 ENV DOMOTICZ_VERSION 3.5877
 
-
-
 RUN \
   apt-get update && \
   apt-get install -y cmake apt-utils build-essential && \
@@ -25,8 +23,8 @@ RUN mkdir /domoticz && \
 
 EXPOSE 8080
 
-VOLUME ["/config", "/domoticz/scripts"]
+VOLUME ["/domoticz/scripts/lua", "/domoticz/data", "/domoticz/log", "/etc/localtime"]
 
 ENTRYPOINT [ "/domoticz/domoticz" ]
 
-CMD ["-www", "8080", "-dbase", "/config/domoticz.db", "-log", "/config/domoticz.log"]
+CMD ["-www", "8080", "-dbase", "/domoticz/data/domoticz.db", "-log", "/domoticz/log/domoticz.log"]

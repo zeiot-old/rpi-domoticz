@@ -7,7 +7,12 @@ See releases on : https://www.domoticz.com/downloads/
 
 Exposes Port `8080`
 
-Volumes : `/config` and `/domoticz/scripts`
+Volumes:
+
+* `/domoticz/scripts/lua`
+* `/domoticz/data`
+* `/domoticz/log`
+* `/etc/localtime`
 
 Configure binfmt-support on the Docker host (works locally or remotely, i.e: using boot2docker):
 
