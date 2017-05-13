@@ -5,7 +5,7 @@
 FROM resin/armv7hf-debian:jessie
 MAINTAINER Nicolas Lamirault <nicolas.lamirault@gmail.com>
 
-ENV DOMOTICZ_VERSION 3.7392
+ENV DOMOTICZ_VERSION 3.7450
 
 RUN \
   apt-get update && \
