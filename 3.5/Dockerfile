@@ -2,7 +2,7 @@
 # AUTHOR:         Nicolas Lamirault <nicolas.lamirault@gmail.com>
 # DESCRIPTION:    zeiot/rpi-domoticz
 
-FROM resin/armv7hf-debian:jessie
+FROM resin/armv7hf-debian:stretch
 MAINTAINER Nicolas Lamirault <nicolas.lamirault@gmail.com>
 
 ENV DOMOTICZ_VERSION 3.5877
@@ -23,7 +23,7 @@ RUN mkdir /domoticz && \
 
 EXPOSE 8080
 
-VOLUME ["/domoticz/scripts/lua", "/domoticz/data", "/domoticz/log", "/etc/localtime"]
+VOLUME ["/domoticz/scripts/lua", "/domoticz/data", "/domoticz/log"]
 
 ENTRYPOINT [ "/domoticz/domoticz" ]
 
